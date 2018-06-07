@@ -23,7 +23,7 @@ RUN apt-get install -y curl
 
 RUN curl -sSL https://get.rvm.io | bash
 
-RUN echo 'source /etc/profile.d/rvm.sh' >> $HOME/.bashrc
+RUN echo 'source /etc/profile.d/rvm.sh' >> /home/jenkins/.bashrc
 #RUN . /etc/profile.d/rvm.sh | bash
 RUN useradd -G rvm jenkins
 
