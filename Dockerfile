@@ -37,6 +37,6 @@ RUN apt-get install -y git
 
 RUN gem install bundler
 
-RUN chmod -R 777 /var/lib/jenkins
+
 
 #RUN bundle install
