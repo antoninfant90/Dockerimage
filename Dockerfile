@@ -1,4 +1,6 @@
 FROM ubuntu:16.04
+ENV HOME /home/jenkins
+
 RUN apt-get -y update -q
 RUN apt-get install -y software-properties-common
 #RUN locate bundle
@@ -32,5 +34,7 @@ RUN /usr/local/rvm/bin/rvm-shell -c "rvm install 2.4.1"
 RUN apt-get install -y git
 
 RUN gem install bundler
+
+RUN chmod -R 777 /var/lib/jenkins
 
 #RUN bundle install
