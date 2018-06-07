@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-ENV HOME /home/jenkins
+
 
 RUN apt-get -y update -q
 RUN apt-get install -y software-properties-common
