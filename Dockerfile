@@ -1,6 +1,8 @@
 FROM ubuntu:16.04
 
-
+RUN mkdir /home/jenkins
+RUN chmod -R 777 /home/jenkins
+ENV HOME /home/jenkins
 RUN apt-get -y update -q
 RUN apt-get install -y software-properties-common
 #RUN locate bundle
@@ -21,7 +23,7 @@ RUN apt-get install -y curl
 
 RUN curl -sSL https://get.rvm.io | bash
 
-RUN echo 'source /etc/profile.d/rvm.sh' >> ~/.bashrc
+RUN echo 'source /etc/profile.d/rvm.sh' >> $HOME/.bashrc
 #RUN . /etc/profile.d/rvm.sh | bash
 RUN useradd -G rvm jenkins
 
